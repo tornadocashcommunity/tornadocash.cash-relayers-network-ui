@@ -1,0 +1,84 @@
+// MAIN COLORS
+$color-transparent: transparent;
+
+$color-white: #fafafa;
+$color-white-003: hsla(0, 0%, 100%, 0.03);
+$color-white-005: hsla(0, 0%, 100%, 0.05);
+$color-white-01: hsla(0, 0%, 100%, 0.1);
+$color-white-02: hsla(0, 0%, 100%, 0.2);
+$color-white-03: hsla(0, 0%, 100%, 0.3);
+$color-white-04: hsla(0, 0%, 100%, 0.4);
+$color-white-08: hsla(0, 0%, 100%, 0.8);
+
+$color-black: #161616;
+$color-black-004: hsla(0, 0%, 0%, 0.04);
+$color-black-01: hsla(0, 0%, 0%, 0.1);
+$color-black-02: hsla(0, 0%, 0%, 0.2);
+$color-black-04: hsla(0, 0%, 0%, 0.4);
+$color-black-06: hsla(0, 0%, 0%, 0.6);
+$color-black-08: hsla(0, 0%, 0%, 0.8);
+
+$color-grey: #b2b2b2;
+$color-grey-medium: #6b6b6b;
+$color-grey-bold: #4f5059;
+$color-grey-heavy: #3a3a42;
+$color-grey-hard: #37383e;
+
+$color-dark: #171717;
+$color-dark-light: #3f4047;
+$color-dark-heavy: #2a2b31;
+$color-dark-hard: #1e1e1e;
+
+$color-default: #44f1a6;
+
+$color-default-light: #45df9c;
+$color-default-dark: #4a8060;
+
+$color-primary: #232323;
+$color-primary-light: #313131;
+
+$color-bg: #000000;
+$color-bg-primary: #1f1f1f;
+$color-overlay-modal: hsla(0, 0%, 2%, 0.86);
+
+$color-gradient-black: linear-gradient(180deg, #181818 0%, #000000 100%);
+
+$color-green: $color-default;
+$color-red: #e45050;
+$color-yellow: #ff8f50;
+
+// STATUS
+$color-success: $color-default;
+$color-danger: $color-red;
+$color-warning: $color-yellow;
+
+// INPUTS
+$color-input-bg: $color-bg-primary;
+$color-input-bg-light: $color-grey-medium;
+$color-input-bg-bold: $color-grey-bold;
+
+$color-input-bg-disabled: $color-grey-hard;
+$color-input-placeholder: $color-grey;
+$color-input-caret: $color-white;
+
+// CHECKBOX
+$color-checkbox-border: $color-grey;
+$color-input-bg-light: $color-grey-medium;
+$color-input-bg-bold: $color-grey-bold;
+
+$color-input-bg-disabled: $color-grey-hard;
+$color-input-placeholder: $color-grey;
+$color-input-caret: $color-white;
+
+// LINKS
+$color-link-text: $color-grey;
+$color-link-hover: $color-default;
+
+//BLOCKS
+$color-block-bg: $color-grey-hard;
+
+//MODALS
+$color-modal-bg: $color-bg;
+
+//ERRORS
+$color-errors-bg: rgba(193, 61, 84, 0.34);

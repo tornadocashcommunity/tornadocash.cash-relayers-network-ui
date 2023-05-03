@@ -1,0 +1,233 @@
+{
+  "notifyTitles": {
+    "wallet": "Change network",
+    "transaction": {
+      "title": "Sent transaction",
+      "link": "Explorer link"
+    },
+    "relayer": "Fetch relayer data",
+    "permit": "Permit error",
+    "sign": "Sign message error",
+    "register": "Register error",
+    "connection": "Connecting Metamask",
+    "changeNetwork": "Change network error"
+  },
+  "errors": {
+    "validation": {
+      "invalidEns": "Invalid ENS name",
+      "invalidEnsDomain": "Invalid ENS domain format. Correct format: xxx.eth",
+      "invalidRelayer": "Invalid relayer",
+      "insufficientFunds": "Insufficient funds",
+      "noAAddress": "Not an Ethereum address",
+      "invalidAddress": "Invalid address",
+      "insufficientInputs": "Insufficient inputs",
+      "invalidRelayerUrl": "Invalid relayer url",
+      "contractAddress": "Contract address not supported",
+      "notOwnerEns": "You are not an owner of this ENS",
+      "existsWorker": "This worker address already exists",
+      "alreadyRegistered": "Relayer is already registered",
+      "notFoundEns": "Unable to find ENS name for your wallet address",
+      "insufficientTORN": "Insufficient TORN balance",
+      "insufficientData": "Insufficient data, please register again",
+      "diffReward": "The Relayer reward address must match your wallet address",
+      "insufficientPermit": "Insufficient permit amount, please increase stake amount on STAKE page",
+      "insufficientAllowance": "Insufficient allowance, please increase allowance on STAKE page",
+      "amountMustBeGreater": "Stake amount must be greater than or equal to min stake amount {postfix}",
+      "ensMainnetUrl": "The ENS url address must match the subdomain of the mainnet network",
+      "wrongNetwork": "Relayer must respond to the Ethereum Mainnet",
+      "noResponse": "Failed to get Relayer status",
+      "withProtocol": "TXT record should not contain any http/https protocol"
+    },
+    "wallet": {
+      "failedTx": "Transaction failed",
+      "userDenied": "You declined an action in your wallet",
+      "userRejected": "You declined an action in your wallet",
+      "lockedProvider": "Please unlock your wallet and try again",
+      "tryAddingTheChain": "Please add a new chain to the wallet",
+      "alreadyPending": "The request is already pending in the wallet",
+      "alreadyProcessed": "The request is already being processed in the wallet",
+      "mismatchNetwork": "Mismatch network, please switch network to Ethereum"
+    },
+    "relayer": {
+      "emptyMainnet": "Cannot find Ethereum mainnet ENS subdomain, please set it up",
+      "notRegistered": "This relayer is not yet registered",
+      "failedToFetch": "Error while receiving data",
+      "failedMainnetStatus": "Failed to get Ethereum Mainnet Relayer status"
+    },
+    "flow": {
+      "unablePermit": "Permit is not available now, please use Approve"
+    }
+  },
+  "pages": {
+    "notFound": {
+      "title": "Oooops!",
+      "description": "Page not found.",
+      "buttons": {
+        "first": "Launch App"
+      }
+    },
+    "relayer": {
+      "title": "Relayer Data",
+      "stake": "Stake balance",
+      "content": {
+        "first": "Join Relayers {first} and {second} to get updates and support"
+      },
+      "connection": {
+        "first": "Connect wallet at first",
+        "second": "Change network at first"
+      },
+      "links": {
+        "first": "Telegram group",
+        "second": "Discord channel"
+      },
+      "error": {
+        "title": "Try again"
+      }
+    },
+    "registration": {
+      "requirement": {
+        "content": {
+          "first": "Relayers are an essential part of the Tornado Cash protocol. They process withdrawal transactions ensuring privacy for Tornado Cash users. Relayers are compensated for their services with a portion of users' deposits. In order to become a part of the decentralized Tornado Cash relayer network and get listed in the preferred list of relayers, you will need to follow all the below steps of this app.",
+          "second": "Please make sure you understand {link} on the User Interface.",
+          "third": "Use at your own risk. The software is provided \"as is,\" without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software."
+        },
+        "links": {
+          "second": "how a relayer is randomly preselected"
+        },
+        "checkbox": "I have read about the risk of becoming a Tornado Cash Relayer and hereby accept any associated risks."
+      },
+      "relayer": {
+        "content": {
+          "first": "The first step is to run the Tornado Cash Relayer software for Ethereum Mainnet. You can find comprehensive instructions {link}. Once completed, enter your relayer URL above."
+        },
+        "links": {
+          "first": "here"
+        },
+        "input": {
+          "label": "Relayer url"
+        }
+      },
+      "ens": {
+        "content": {
+          "first": "Create an ENS domain for your Relayer and set up its mainnet subdomain according to the format below. Additionally, add a TXT record (TXT record should not contain any http/https protocol) with the Relayer URL ({link}) to the mainnet subdomain.",
+          "second": "You can add different subdomains with corresponding TXT records to support other chains as well.",
+          "third": "Ethereum Relayers (Mandatory)",
+          "fourth": "Sidechains Relayers (Optional)",
+          "fifth": "Sidechains relayers use a different version of the Relayer software. See instructions {link}.",
+          "sixth": "Nova Relayer (Optional)",
+          "seventh": "The Tornado Cash Nova uses its own version of the software as well. See instructions {link}."
+        },
+        "links": {
+          "first": "instructions",
+          "second": "here"
+        },
+        "input": {
+          "label": "ENS domain"
+        }
+      },
+      "workers": {
+        "content": {
+          "first": "Workers are the addresses from which your relayer would send ZK-Proofs to users. By default, the first worker is the ENS domain owner's address. You may want to set up more than one worker for an extra level of security. You will need to register workers only for the mainnet; other networks do not require having workers registered.",
+          "second": "All workers' addresses are correct and belong to relayer"
+        },
+        "links": {
+          "first": "instructions"
+        },
+        "input": {
+          "label": "Relayer url"
+        }
+      },
+      "stake": {
+        "content": {
+          "first": "Staking TORN is required to be added to recommended list of Relayers. The minimum amount is {strong}. Every time your relayer is used, a small amount of TORN will be taken from your stake and distributed among DAO members who had locked their TORN to have voting power ({link}).",
+          "second": "Your staked TORN amount is not claimable, and it is non-refundable."
+        },
+        "links": {
+          "first": "more info"
+        },
+        "proceed": {
+          "first": "Approve",
+          "second": "Permit"
+        },
+        "input": {
+          "label": "Stake amount",
+          "balance": "Balance: {balance}"
+        }
+      }
+    }
+  },
+  "containers": {
+    "app": {
+      "buttons": {
+        "first": "Back",
+        "second": "Continue",
+        "third": "Register"
+      }
+    },
+    "header": {
+      "pending": "Pending...",
+      "buttons": {
+        "first": "Connect",
+        "second": "Change network"
+      }
+    }
+  },
+  "modals": {
+    "account": {
+      "title": "Account data",
+      "description": "You can check your account and transaction details here.",
+      "content": {
+        "first": "Wallet address",
+        "second": "Wallet balance",
+        "third": "Torn balance"
+      },
+      "table": {
+        "columns": {
+          "first": "Hash",
+          "second": "Date",
+          "third": "Type",
+          "fourth": "Status"
+        }
+      }
+    },
+    "stake": {
+      "title": "Stake TORN",
+      "subtitle": "Your staked TORN amount is not claimable, and it is non-refundable.",
+      "content": {
+        "sign": {
+          "first": "Approve",
+          "second": "Permit"
+        },
+        "proceed": "Stake"
+      },
+      "input": {
+        "label": "Stake amount",
+        "balance": "Balance: {balance}"
+      }
+    }
+  },
+  "components": {
+    "relayerInfo": {
+      "content": {
+        "first": "Workers' addresses"
+      },
+      "inputs": {
+        "labels": {
+          "first": "Relayer url",
+          "second": "ENS domain",
+          "third": "Stake amount"
+        }
+      }
+    },
+    "stepper": {
+      "titles": {
+        "first": "Requirements",
+        "second": "Set Up Relayer",
+        "third": "Set Up ENS Subdomain",
+        "fourth": "Set Up Workers",
+        "fifth": "Stake",
+        "sixth": "Summary"
+      }
+    }
+  }
+}
