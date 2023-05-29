@@ -76,10 +76,10 @@ export const instructions = {
 
 // SOCIALS
 export const DISCOURSE = 'https://torn.community'
-export const DISCORD = 'https://discord.com/invite/TFDrM8K42j'
+export const DISCORD = ''
 export const MEDIUM = 'https://tornado-cash.medium.com'
 export const TWITTER = 'https://twitter.com/TornadoCash'
-export const TELEGRAM = 'https://t.me/TornadoCashOfficial'
-export const RELAYERS_TELEGRAM = 'https://t.me/+GV9sGO_3TJNiZGY7'
-export const GITHUB = 'https://github.com/tornadocash'
-export const TORNADO_CASH_LANDING = 'https://tornado.cash'
+export const TELEGRAM = 'https://t.me/TornadoOfficial'
+export const RELAYERS_TELEGRAM = 'https://t.me/+Q19elAT45rxhODA0'
+export const GITHUB = 'https://git.tornado.ws'
+export const TORNADO_CASH_LANDING = 'https://tornado.ws'
