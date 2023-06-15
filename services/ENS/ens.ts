@@ -1,21 +1,13 @@
-import { BigNumber } from 'ethers'
-import { namehash } from 'ethers/lib/utils'
-
 import { ChainId } from '@/types'
-import { getEnsRegistry } from '@/contracts'
+
+import { getProvider } from '@/services'
 
 async function getEnsOwner(ensName: string, chainId: ChainId) {
   try {
-    const node = namehash(ensName)
-    const ensContract = getEnsRegistry(chainId)
+    const { provider } = getProvider(chainId)
+    const ownerAddress = await provider.resolveName(ensName)
 
-    const owner = await ensContract.callStatic.owner(node)
-
-    if (BigNumber.from(owner).isZero()) {
-      return undefined
-    }
-
-    return owner
+    return ownerAddress || undefined
   } catch (err) {
     return undefined
   }
