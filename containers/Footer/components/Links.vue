@@ -12,11 +12,6 @@
         <base-icon name="discourse" size="fill" />
       </a>
 
-      <a :href="discord" target="_blank" aria-label="Discord" :class="$style.social__link" rel="noopener noreferrer nofollow">
-        <span :class="$style.social__linkText">Discord</span>
-        <base-icon name="discord" size="fill" />
-      </a>
-
       <a :href="medium" target="_blank" aria-label="Medium" :class="$style.social__link" rel="noopener noreferrer nofollow">
         <span :class="$style.social__linkText">Medium</span>
         <base-icon name="medium" size="fill" />
@@ -41,13 +36,12 @@
 </template>
 
 <script>
-import { DISCOURSE, DISCORD, MEDIUM, TWITTER, TELEGRAM, GITHUB } from '@/constants'
+import { DISCOURSE, MEDIUM, TWITTER, TELEGRAM, GITHUB } from '@/constants'
 
 export default {
   data: function () {
     return {
       discourse: DISCOURSE,
-      discord: DISCORD,
       medium: MEDIUM,
       twitter: TWITTER,
       telegram: TELEGRAM,

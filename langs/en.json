@@ -77,8 +77,7 @@
         "second": "Change network at first"
       },
       "links": {
-        "first": "Telegram group",
-        "second": "Discord channel"
+        "first": "Telegram group"
       },
       "error": {
         "title": "Try again"
@@ -113,9 +112,8 @@
           "second": "You can add different subdomains with corresponding TXT records to support other chains as well.",
           "third": "Ethereum Relayers (Mandatory)",
           "fourth": "Sidechains Relayers (Optional)",
-          "fifth": "Sidechains relayers use a different version of the Relayer software. See instructions {link}.",
-          "sixth": "Nova Relayer (Optional)",
-          "seventh": "The Tornado Cash Nova uses its own version of the software as well. See instructions {link}."
+          "fifth": "Nova Relayer (Optional)",
+          "sixth": "The Tornado Cash Nova uses its own version of the software as well. See instructions {link}."
         },
         "links": {
           "first": "instructions",

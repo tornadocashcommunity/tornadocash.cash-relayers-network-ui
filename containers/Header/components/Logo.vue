@@ -1,7 +1,7 @@
 <template>
   <div @click="onReset">
     <nuxt-link :to="redirectPath" :class="$style.logoLink" aria-label="Home">
-      <span role="none" :class="$style.logoText">Tornado.Cash Relayer Registry</span>
+      <span role="none" :class="$style.logoText">Tornado Cash Relayer Registry</span>
       <base-icon name="tornado" size="fill" />
     </nuxt-link>
   </div>

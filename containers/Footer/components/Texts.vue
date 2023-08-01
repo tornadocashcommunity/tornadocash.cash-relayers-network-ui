@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.container">
     <span :class="$style.texts">
-      Tornado.cash Relayer Registry version:
+      Tornado Cash Relayer Registry version:
       <span :class="$style.texts__version">{{ commit }}</span>
     </span>
   </div>

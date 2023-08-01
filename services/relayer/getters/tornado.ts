@@ -1,13 +1,18 @@
 import axios from 'axios'
 
-import { ChainId, Relayer } from '@/types'
+import { ChainId, Relayer, RelayerParsedVersion } from '@/types'
 
 import { errors } from '@/constants'
 import { getProvider, getRelayerValidateFunction } from '@/services'
 
-import { GetTornadoStatusParams } from '../@types'
+import { GetTornadoStatusParams, RelayerParsedData } from '../@types'
 
-async function getRelayerData({ url, ensName, hasEnabledLightProxy, chainId = ChainId.MAINNET }: GetTornadoStatusParams) {
+async function getRelayerData({
+  url,
+  ensName,
+  hasEnabledLightProxy,
+  chainId = ChainId.MAINNET,
+}: GetTornadoStatusParams): Promise<RelayerParsedData> {
   let response = null
 
   try {
@@ -39,12 +44,23 @@ async function getRelayerData({ url, ensName, hasEnabledLightProxy, chainId = Ch
     return { isValid: false }
   }
 
-  const version = hasEnabledLightProxy ? '5.' : '4.'
-  const isOutdated = !response.data.version.startsWith(version)
+  const semVerRegex =
+    /^(?<major>0|[1-9]\d*)\.(?<minor>0|[1-9]\d*)\.(?<patch>0|[1-9]\d*)(?:-(?<prerelease>(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+(?<buildmetadata>[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/
+  const regexpResult = semVerRegex.exec(response.data.version)
+  const invalidVersionData = { isValid: false, address: response.data.rewardAccount, chainId: response.data.netId }
 
-  if (isOutdated) {
+  if (!regexpResult?.groups) {
+    console.error('askRelayerStatus', url || ensName, 'Version specified incorrectly.')
+    return invalidVersionData
+  }
+
+  const { major } = regexpResult.groups as RelayerParsedVersion
+  const minimalMajorVersion = 5
+  const isMajorVersionUpdated = Number(major) >= minimalMajorVersion
+
+  if (!isMajorVersionUpdated) {
     console.error('askRelayerStatus', url || ensName, 'Outdated version.')
-    return { isValid: false, address: response.data.rewardAccount, chainId: response.data.netId }
+    return invalidVersionData
   }
 
   return { isValid, address: response.data.rewardAccount, chainId: response.data.netId }

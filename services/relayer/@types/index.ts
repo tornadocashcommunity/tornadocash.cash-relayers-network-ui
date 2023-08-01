@@ -12,3 +12,9 @@ export type GetTornadoStatusParams = {
   chainId?: ChainId
   hasEnabledLightProxy: boolean
 }
+
+export type RelayerParsedData = {
+  isValid: boolean
+  address?: string
+  chainId?: ChainId
+}

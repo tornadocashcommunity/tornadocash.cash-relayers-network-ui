@@ -26,7 +26,6 @@ const iconsNames = [
   'Medium',
   'Github',
   'Twitter',
-  'Discord',
   'Success',
   'Missing',
   'Warning',

@@ -54,20 +54,13 @@
           <li>arbitrum-tornado.xxx.eth</li>
           <li>avalanche-tornado.xxx.eth</li>
         </ul>
-        <strong>
-          <i18n path="pages.registration.ens.content.fifth">
-            <template #link>
-              <base-link :href="instructionLight">{{ $t('pages.registration.ens.links.second') }}</base-link>
-            </template>
-          </i18n>
-        </strong>
-        <h4>{{ $t('pages.registration.ens.content.sixth') }}</h4>
+        <h4>{{ $t('pages.registration.ens.content.fifth') }}</h4>
 
         <ul :class="$style.examples">
           <li>gnosis-nova.xxx.eth</li>
         </ul>
         <strong>
-          <i18n path="pages.registration.ens.content.seventh">
+          <i18n path="pages.registration.ens.content.sixth">
             <template #link>
               <base-link :href="instructionNova">{{ $t('pages.registration.ens.links.second') }}</base-link>
             </template>
@@ -94,7 +87,7 @@ export default {
       isENSChecking: false,
       ensInvalidReason: '',
       instructionNova: instructions.nova,
-      instructionLight: instructions.light,
+      instructionLink: instructions.relayer,
     }
   },
   computed: {

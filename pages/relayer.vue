@@ -5,9 +5,6 @@
         <template #first>
           <base-link :href="relayerGroup">{{ $t('pages.relayer.links.first') }}</base-link>
         </template>
-        <template #second>
-          <base-link :href="discord">{{ $t('pages.relayer.links.second') }}</base-link>
-        </template>
       </i18n>
     </base-snackbar>
 
@@ -58,7 +55,7 @@
 import { mapActions, mapGetters } from 'vuex'
 
 import { createModalArgs } from '@/utilities'
-import { RELAYERS_TELEGRAM, DISCORD } from '@/constants'
+import { RELAYERS_TELEGRAM } from '@/constants'
 import WorkArea from '@/containers/WorkArea/WorkArea'
 
 import { StakeModal } from '@/modals'
@@ -72,7 +69,6 @@ export default {
       hasError: false,
       errorText: '',
       relayerGroup: RELAYERS_TELEGRAM,
-      discord: DISCORD,
     }
   },
   computed: {

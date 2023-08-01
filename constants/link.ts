@@ -67,16 +67,15 @@ export const menuLinks = {
 }
 
 export const instructions = {
-  light: 'https://github.com/tornadocash/tornado-relayer/blob/light/README.md',
-  relayer: 'https://github.com/tornadocash/tornado-relayer#deploy-with-docker-compose',
-  nova: 'https://github.com/tornadocash/tornado-pool-relayer#deploy-with-docker-compose',
+  relayer: 'https://git.tornado.ws/tornadocash/classic-relayer/src/branch/main-v5#deploy-with-script-and-docker-compose',
+  nova: 'https://git.tornado.ws/tornadocash/nova-relayer#deploy-with-docker-compose',
   burn: 'https://torn.community/t/proposal-relayer-registry-setting-parameters-after-audit/2134',
-  formula: 'https://docs.tornado.cash/general/how-to-become-a-relayer#1.-warning-be-aware-and-accept-potential-risks',
+  formula:
+    'https://docs.tornado.ws/general/guides/relayer.html#1-the-relayer-selection-system-how-a-relayer-is-chosen-by-frontends',
 }
 
 // SOCIALS
-export const DISCOURSE = 'https://torn.community'
-export const DISCORD = ''
+export const DISCOURSE = 'https://forum.tornado.ws'
 export const MEDIUM = 'https://tornado-cash.medium.com'
 export const TWITTER = 'https://twitter.com/TornadoCash'
 export const TELEGRAM = 'https://t.me/TornadoOfficial'
