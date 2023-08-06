@@ -55,7 +55,7 @@ async function getRelayerData({
   }
 
   const { major } = regexpResult.groups as RelayerParsedVersion
-  const minimalMajorVersion = 5
+  const minimalMajorVersion = 4
   const isMajorVersionUpdated = Number(major) >= minimalMajorVersion
 
   if (!isMajorVersionUpdated) {
