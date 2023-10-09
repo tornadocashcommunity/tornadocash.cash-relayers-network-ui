@@ -67,8 +67,7 @@ export const menuLinks = {
 }
 
 export const instructions = {
-  relayer: 'https://git.tornado.ws/tornadocash/classic-relayer/src/branch/main-v5#deploy-with-script-and-docker-compose',
-  nova: 'https://git.tornado.ws/tornadocash/nova-relayer#deploy-with-docker-compose',
+  relayer: 'https://git.tornado.ws/tornadocash/tornado-relayer#deploy-with-script-and-docker-compose',
   burn: 'https://torn.community/t/proposal-relayer-registry-setting-parameters-after-audit/2134',
   formula:
     'https://docs.tornado.ws/general/guides/relayer.html#1-the-relayer-selection-system-how-a-relayer-is-chosen-by-frontends',

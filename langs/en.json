@@ -112,8 +112,7 @@
           "second": "You can add different subdomains with corresponding TXT records to support other chains as well.",
           "third": "Ethereum Relayers (Mandatory)",
           "fourth": "Sidechains Relayers (Optional)",
-          "fifth": "Nova Relayer (Optional)",
-          "sixth": "The Tornado Cash Nova uses its own version of the software as well. See instructions {link}."
+          "fifth": "Nova Relayer (Optional)"
         },
         "links": {
           "first": "instructions",

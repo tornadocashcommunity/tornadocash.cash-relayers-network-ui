@@ -59,13 +59,6 @@
         <ul :class="$style.examples">
           <li>gnosis-nova.xxx.eth</li>
         </ul>
-        <strong>
-          <i18n path="pages.registration.ens.content.sixth">
-            <template #link>
-              <base-link :href="instructionNova">{{ $t('pages.registration.ens.links.second') }}</base-link>
-            </template>
-          </i18n>
-        </strong>
       </section>
     </section>
   </app-container>
@@ -86,7 +79,6 @@ export default {
       isENSInvalid: false,
       isENSChecking: false,
       ensInvalidReason: '',
-      instructionNova: instructions.nova,
       instructionLink: instructions.relayer,
     }
   },
