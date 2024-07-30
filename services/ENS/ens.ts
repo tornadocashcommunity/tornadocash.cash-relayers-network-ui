@@ -15,7 +15,7 @@ async function getEnsOwner(ensName: string, chainId: ChainId) {
 
 async function getNameFromHash(ensHash: string) {
   try {
-    const response = await fetch('https://api.thegraph.com/subgraphs/name/ensdomains/ens', {
+    const response = await fetch('https://tornadocash-rpc.com/subgraphs/name/graphprotocol/ens', {
       body: JSON.stringify({
         query: `{
             domain(id: "${ensHash}") {
